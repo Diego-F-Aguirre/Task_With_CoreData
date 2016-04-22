@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Task_With_CoreData/TaskTableViewCell.swift"
+            timestampString = "483045476.099557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Task_With_CoreData/TaskTableViewCell.swift"
+            timestampString = "483043834.51522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "checkSwitchTapped(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Task_With_CoreData/TaskListViewController.swift"
+            timestampString = "483043889.625537"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "checkValueChanged(_:selection:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Task_With_CoreData.TaskListViewController.checkValueChanged (Task_With_CoreData.TaskTableViewCell, selection : Swift.Bool) -&gt; ()"
+                  moduleName = "Task_With_CoreData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegoaguirre/Desktop/Development/DevMountain_AsyncBeta/Unit2/Module5/Task_With_CoreData/Task_With_CoreData/TaskListViewController.swift"
+                  timestampString = "483043889.639261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Task_With_CoreData.TaskListViewController.checkValueChanged (Task_With_CoreData.TaskTableViewCell, selection : Swift.Bool) -&gt; ()"
+                  moduleName = "Task_With_CoreData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegoaguirre/Desktop/Development/DevMountain_AsyncBeta/Unit2/Module5/Task_With_CoreData/Task_With_CoreData/TaskListViewController.swift"
+                  timestampString = "483043889.639604"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

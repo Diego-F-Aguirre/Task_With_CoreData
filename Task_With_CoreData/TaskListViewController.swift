@@ -18,11 +18,17 @@ class TaskListViewController: UIViewController {
 
 extension TaskListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return TaskController.sharedInstance.tasks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("taskCell", forIndexPath: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
+        
+        let task = TaskController.sharedInstance.tasks[indexPath.row]
+        cell.updateTaskCell(task)
+        cell.delegate = self
+        
+        return cell
     }
 }
 
@@ -36,7 +42,59 @@ extension TaskListViewController: UITableViewDelegate {
 }
 
 extension TaskListViewController {
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        <#code#>
+    @IBAction func addTaskButtonPressed(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Add a task", message: "Enter a task you wish to keep track of", preferredStyle: .Alert)
+        var inputTitleTextField: UITextField?
+        var inputBodyTextField: UITextField?
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
+        let doneAction = UIAlertAction(title: "Done", style: .Default) { (_) in
+            if let inputTitleTextField = inputTitleTextField,
+                title = inputTitleTextField.text,
+                inputBodyTextField = inputBodyTextField,
+                body = inputBodyTextField.text
+            {
+                TaskController.sharedInstance.createTask(title, body: body, isChecked: false)
+                self.tableView.reloadData()
+            }
+        }
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            inputTitleTextField = textField
+        }
+        
+        alertController.addTextFieldWithConfigurationHandler { (bodyTextField) in
+            inputBodyTextField = bodyTextField
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(doneAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+}
+
+extension TaskListViewController: TaskTableViewCellDelegate {
+    func checkValueChanged(cell: TaskTableViewCell, selection: Bool) {
+        guard let task = cell.task else { return }
+        
+        TaskController.sharedInstance.updateCheckValueChanged(task, selected: selection)
+        tableView.reloadData()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

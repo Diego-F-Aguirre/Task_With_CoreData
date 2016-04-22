@@ -47,7 +47,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vr1-jQ-Jq8">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="complete" offImage="incomplete" translatesAutoresizingMaskIntoConstraints="NO" id="Vr1-jQ-Jq8">
                                                     <rect key="frame" x="531" y="23" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="0O2-cy-nZw"/>
@@ -91,7 +91,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pqf-Ka-vw1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jci-TC-yfY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jci-TC-yfY">
+                            <connections>
+                                <action selector="addTaskButtonPressed:" destination="uFP-NS-5pu" id="ZPc-aa-WRi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="N6x-nU-0Qq" id="0Gj-as-1wm"/>
@@ -120,4 +124,8 @@
             <point key="canvasLocation" x="393" y="342"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="complete" width="256" height="256"/>
+        <image name="incomplete" width="256" height="256"/>
+    </resources>
 </document>

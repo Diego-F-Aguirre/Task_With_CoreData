@@ -12,6 +12,11 @@ import CoreData
 class TaskController {
     static let sharedInstance = TaskController()
     private let kTask = "Task"
+    
+    var tasks: [Task] {
+        guard let tasks = fetchAllTasks() else { return [] }
+        return tasks
+    }
 }
 
 /**********************/
@@ -56,6 +61,12 @@ extension TaskController {
     func removeTask(task: Task) {
         task.managedObjectContext?.deleteObject(task)
         saveTask()
+    }
+}
+
+extension TaskController {
+    func updateCheckValueChanged(task: Task, selected: Bool) {
+        task.isChecked = selected
     }
 }
 
